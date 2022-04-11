@@ -1,0 +1,13 @@
+div#example_paginate{
+    background: #0dcaf0;
+}
+a#example_next,a#example_previous,a.paginate_button:hover{
+    background:#27c1db;
+    color:#0dcaf0;
+}
+a.paginate_button.current{
+    background:#fff !important; 
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:active{
+    background:#27c1db;
+}

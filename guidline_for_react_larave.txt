@@ -1,0 +1,50 @@
+1 : create project in laravel
+2: run composer require laravel/ui     for innitlize react js
+2: run php artiasn ui react            for create react js files
+4 : go to bootswatch and run npm install bootswatch
+
+5 : copy the below code and paster it into app.scss under sass folder and replace '[theme]' like materia 
+
+@import "~bootswatch/dist/[theme]/variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~bootswatch/dist/[theme]/bootswatch";
+
+6: call the id of example.js in wellcome.blade.php
+
+7:make model for api contact with migration
+8 : run react-router-dom to install react-router-dom
+9: run npm i @babel/plugin-proposal-class-properties to install babel for browser friendly
+
+10 : get api code import useeffect and use state at the top and place code for api get data
+
+   const [userData, setData] = useState([]);
+    useEffect(()=>
+    {
+        let fetchData  =async() =>
+        {
+            const {data}=await axios.get(`/contacts`);   
+            setData(data.data)
+        }
+   
+    fetchData()
+      //  axios.get()
+    })
+and the foreach/map loop  
+
+           <tbody>
+                        { 
+                        userData.map((val, index) =>
+                        <tr key={index}>
+                        <th scope="row">{val.id}</th>
+                        <td>{val.fullname}</td>
+                        <td>{val.email}</td>
+                        <td>{val.phone}</td>
+                        <td><Link to={`edit/${val.id}`}>Edit</Link></td>
+                        <td><button type="button" onClick={() => deletedata(val.id)}>Delete</button></td>
+                        </tr>
+                        ) }
+                        
+                    </tbody>
+0332-4006157
+Maryam.hassan@bankalfalah.com
+for bank alflah maryam
